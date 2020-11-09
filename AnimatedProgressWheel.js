@@ -90,7 +90,7 @@ render() {
         <View style={styles.container}>
         {this.renderLoader(styles)}
     {fullColor && (
-    <Animated.View style={{position: 'absolute', opacity: this.interpolateColorOpacity()}}>
+    <Animated.View style={{position: 'absolute'}}>
         {this.renderLoader(styles, fullColor)}
     </Animated.View>
     )}
@@ -129,7 +129,6 @@ const generateStyles = ({size, width, color, backgroundColor, containerColor}) =
             width: size,
             height: size,
             borderRadius: size / 2,
-            overflow: 'hidden',
         },
         background: {
             width: size,
